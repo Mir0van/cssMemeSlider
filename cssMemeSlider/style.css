@@ -70,6 +70,115 @@ button,
 .wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  min-width: 320px;
+}
+
+.slider {
+  display: grid;
+  width: 85vw;
+  max-width: 50rem;
+  background-color: gray;
+  overflow-x: hidden;
+}
+
+.slider__galary {
+  display: flex;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.3s ease;
+}
+
+.slider__slide-wrapper {
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.slider__slide {
+  max-height: 38rem;
+  height: 95%;
+  width: 95%;
+  object-fit: contain;
+}
+
+.slider__description-container {
+  height: 2rem;
+  overflow-y: hidden;
+}
+
+.slider__description-wrapper {
+  display: flex;
+  flex-direction: column;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.3s ease;
+}
+
+.slider__description {
+  height: 2rem;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+}
+
+.slider__control:nth-child(1):checked ~ .slider__galary{
+  transform: translate3d(0, 0, 0);
+}
+
+.slider__control:nth-child(2):checked ~ .slider__galary{
+  transform: translate3d(-100%, 0, 0);
+}
+
+.slider__control:nth-child(3):checked ~ .slider__galary{
+  transform: translate3d(-200%, 0, 0);
+}
+
+.slider__control:nth-child(4):checked ~ .slider__galary{
+  transform: translate3d(-300%, 0, 0);
+}
+
+.slider__control:nth-child(5):checked ~ .slider__galary{
+  transform: translate3d(-400%, 0, 0);
+}
+
+.slider__control:nth-child(6):checked ~ .slider__galary{
+  transform: translate3d(-500%, 0, 0);
+}
+
+.slider__control:nth-child(7):checked ~ .slider__galary{
+  transform: translate3d(-600%, 0, 0);
+}
+
+/* pagination */
+
+.slider__control:nth-child(1):checked ~ .slider__description-container .slider__description-wrapper {
+  transform: translate3d(0, 0, 0);
+}
+
+.slider__control:nth-child(2):checked ~ .slider__description-container .slider__description-wrapper {
+  transform: translate3d(0, -14.285%, 0);
+}
+
+.slider__control:nth-child(3):checked ~ .slider__description-container .slider__description-wrapper {
+  transform: translate3d(0, -28.571%, 0);
+}
+
+.slider__control:nth-child(4):checked ~ .slider__description-container .slider__description-wrapper {
+  transform: translate3d(0, -42.857%, 0);
+}
+
+.slider__control:nth-child(5):checked ~ .slider__description-container .slider__description-wrapper {
+  transform: translate3d(0, -57.142%, 0);
+}
+
+.slider__control:nth-child(6):checked ~ .slider__description-container .slider__description-wrapper {
+  transform: translate3d(0, -71.428%, 0);
+}
+
+.slider__control:nth-child(7):checked ~ .slider__description-container .slider__description-wrapper {
+  transform: translate3d(0, -85.714%, 0);
 }
